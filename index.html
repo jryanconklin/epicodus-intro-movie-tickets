@@ -4,55 +4,28 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="js/jquery-3.0.0.js"></script>
-    <script type="js/bootstrap.js"></script>
-    <script type="js/scripts.js"></script>
+    <script src="js/jquery-3.0.0.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/scripts.js"></script>
     <title>Movie Tickets</title>
   </head>
   <body>
     <div class="container">
       <h1>Fun Time Happy Movie House</h1>
       <hr>
-
-      <div class="row">
-        <div id="allages" class="col-md-6">
-          <h4>All Ages Movies</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="rangers">Power Rangers - Rise of the Rainbow Ranger
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="happy">Happy People in Happy Town
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="dino">Good Dinosaur Too - A Better Dinosaur
-            </label>
-          </div>
-        </div> <!-- End Radio All Ages Div -->
-        <div id="adult" class="col-md-6">
-          <h4>18 and Over!</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="batman">Batman - Baffleck Rising
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="planet">Captain Planet - The Revengance
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="movies" value="wilted">Wilted Flowers
-            </label>
-          </div>
-        </div> <!-- End Radio Adult Div -->
-
-      </div> <!-- End Row Div  -->
+      <form id="new-ticket">
+        <div class="row">
+          <div id="allages" class="col-md-12">
+            <h4>All Ages Movies</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="movie" value="rangers">Power Rangers - Rise of the Rainbow Ranger
+              </label>
+            </div>
+          </div> <!-- End Radio All Ages Div -->
+        </div> <!-- End Row Div  -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> <!-- End Form Div  -->
       <hr>
     </div> <!-- End Container Div  -->
   </body>
