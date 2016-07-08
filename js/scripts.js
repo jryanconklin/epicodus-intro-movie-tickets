@@ -1,16 +1,29 @@
 //Business Logic
 
-function Movie(name) {
-  this.name = name;
+function Ticket(buyerAge, movie, time, over18, firstRun) {
+  this.buyerAge = buyerAge;
+  this.movie = movie;
+  this.time = time;
+  this.over18 = over18;
+  this.firstRun = firstRun;
 }
 
-function Ticket(movie, price) {
-  this.movie = movie;
-  this.price = "$" + 14;
+Ticket.prototype.validSale = function() {
+  if (this.over18 === false) {
+    return true;
+  } else if (this.over18 === true && this.buyerAge >= 18) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 Ticket.prototype.ticketPrice = function() {
-  console.log(this.movie + " is " + this.price);
+  if (this.time < 1700 || this.buyerAge > 55 || this.firstRun === false ) {
+    return "$" + 7.50;
+  } else {
+    return "$" + 15.00;
+  }
 }
 
 //User Interface Logic
@@ -18,9 +31,16 @@ Ticket.prototype.ticketPrice = function() {
 $(document).ready(function() {
   $("#new-ticket").submit(function(event) {
     event.preventDefault();
-    var inputtedMovie = $("input:radio[name=movie]:checked").val();
 
-    var newTicket = new Ticket(inputtedMovie)
+    var buyerAge = ;
+    var movie = ;
+    var time = ;
+    var over18 = ;
+
+    var ticket = new Ticket()
+
+    // var inputtedMovie = $("input:radio[name=movie]:checked").val();
+    // var newTicket = new Ticket(inputtedMovie)
 
     // alert(inputtedMovie);
 
