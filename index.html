@@ -15,18 +15,63 @@
       <hr>
       <form id="new-ticket">
         <div class="row">
-          <div id="allages" class="col-md-12">
-            <h4>All Ages Movies</h4>
+          <div class="col-lg-4 col-sm-6">
+            <h4>Enter Your Age</h4>
+            <div class="form-group has-success">
+              <label for="age"></label>
+              <input id="buyerAge" type="number">
+            </div>
+          </div><!--End Column Div for Name Section  -->
+        </div><!--End Row Div for Name Section  -->
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 over18 secondRun">
+            <h3 class="text-center">Batman Begins</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="movie" value="rangers">Power Rangers - Rise of the Rainbow Ranger
+                <input type="radio" name="movies" value="Batman Begins">See Me?
               </label>
             </div>
-          </div> <!-- End Radio All Ages Div -->
-        </div> <!-- End Row Div  -->
+            <img src="img/batman_begins.jpg" alt="batman begins movie poster" class="img-responsive"/>
+            <div class="checkbox">
+              <label>
+                <input name="over18" type="checkbox" checked disabled> Rated for 18 and Over?
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" disabled> Premier Title?
+              </label>
+            </div>
+            <p>Batman Begins is a 2005 British-American superhero film based on the fictional DC Comics character Batman, co-written and directed by Christopher Nolan and starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Tom Wilkinson, Rutger Hauer, Ken Watanabe, and Morgan Freeman. The film reboots the Batman film series, telling the origin story of the title character (Bale), from his alter ego Bruce Wayne's initial fear of bats, the death of his parents, his journey to become Batman, and his fight to stop Ra's al Ghul (Neeson) and the Scarecrow (Murphy) from plunging Gotham City into chaos. It draws inspiration from classic comic book storylines such as The Man Who Falls, Batman: Year One, and Batman: The Long Halloween.</p>
+            <h5>Available Times:</h5>
+            <label class="radio-inline">
+              <input type="radio" name="times" value="1100">11:00am
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="times" value="1400">02:00pm
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="times" value="1700">05:00pm
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="times" value="2000">10:00pm
+            </label>
+          </div><!-- End Batman Begins -->
+
+        </div><!--End Movies Section -->
+
+
+
+
+
+        <hr>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <hr>
       </form> <!-- End Form Div  -->
-      <hr>
+      <div id="price">
+
+      </div>
     </div> <!-- End Container Div  -->
   </body>
 </html>

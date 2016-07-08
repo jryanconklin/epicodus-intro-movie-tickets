@@ -32,19 +32,20 @@ $(document).ready(function() {
   $("#new-ticket").submit(function(event) {
     event.preventDefault();
 
-    var buyerAge = ;
-    var movie = ;
-    var time = ;
-    var over18 = ;
+    var movieBuyerAge = $("#age").val();
+    var movieName = $("input:radio[name=movies]:checked").val();
+    var movieTime = $("input:radio[name=times]:checked").val();;
+    var movieOver18 = true;
+    var movieFirstRun = false;
 
-    var ticket = new Ticket()
+    var userTicket = new Ticket(movieBuyerAge, movieName, movieTime, movieOver18, movieFirstRun);
 
-    // var inputtedMovie = $("input:radio[name=movie]:checked").val();
-    // var newTicket = new Ticket(inputtedMovie)
 
-    // alert(inputtedMovie);
-
-    newTicket.ticketPrice();
+    if (userTicket.validSale() === true ) {
+      alert(userTicket.ticketPrice());
+    } else {
+      alert("I'm Sorry, This Sale is Not Valid");
+    }
 
   }); // End Form Function
 }); // End Document Ready Function
